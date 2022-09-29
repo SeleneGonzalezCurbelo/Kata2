@@ -3,8 +3,6 @@ package kata2;
 import java.util.HashMap;
 import java.util.Map;
 
-// Version 3
-
 public class Histogram {
     private final int[] data;
 
