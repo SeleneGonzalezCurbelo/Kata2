@@ -3,18 +3,20 @@ package kata2;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Histogram {
-    private final int[] data;
-
-    public Histogram(int[] data) {
+public class Histogram<T> {
+    private final T[] data;
+    
+    public Histogram(T[] data) {
         this.data = data;
     }
     
-    Map<Integer, Integer> getHistogram(){
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-        for (int key : data) {
+    Map<T, Integer> getHistogram(){
+        Map<T, Integer> map = new HashMap<T, Integer>();
+
+        for (T key : data) {
            map.put(key, map.containsKey(key) ? map.get(key) + 1 : 1);
-        } 
+        }
+      
         return map;
     }
 }
