@@ -7,6 +7,9 @@ public class Histogram<T> {
     private final T[] data;
     
     public Histogram(T[] data) {
+        if (data == null) {
+            throw new IllegalArgumentException("Data array cannot be null");
+        }
         this.data = data;
     }
     
